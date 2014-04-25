@@ -1,5 +1,5 @@
 # Hausaufgabe 03
-# Phillip Alday <phillip.alday@staff.uni-marburg.de>
+# Frederik Timm <timmfr@students.uni-marburg.de>
 # 2014-04-23
 # Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
 
