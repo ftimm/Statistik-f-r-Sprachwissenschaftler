@@ -104,6 +104,7 @@ tabelle.prozent <- paste (100*tabelle.rel,"%")
  tabelle.sorted <- sort(tabelle,decreasing=TRUE)
  print(tabelle.sorted)
 
+
 # Sie sehen hier, dass manche Funktionen weitere Optionen haben, die wir
 # bestimmen können. Hier wollten wir, dass die Liste mit dem größten Wert
 # anfängt, daher setzen wir decreasing=TRUE
