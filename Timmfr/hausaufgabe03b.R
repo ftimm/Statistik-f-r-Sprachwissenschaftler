@@ -59,18 +59,18 @@ print(sqrt(my.data))
 print(my.data**3)
 
 # Logarithmen
-# print(log(my.data))
+ print(log(my.data))
 
 # Summe aller Elemente in einem Vektor
-# print(sum(my.data))
+ print(sum(my.data))
 
 # Sortieren
-# print(sort(my.data))
+ print(sort(my.data))
 
 # und vieles Mehr! 
 
 # Es gibt eine eingebaute Funktion für das Median:
-# print(median(my.data))
+ print(median(my.data))
 
 # aber nicht für den Modalwert!
 # Es gibt aber andere Funktionen, die uns da helfen.
@@ -85,11 +85,11 @@ more.data <- c("m","m","w","w","m","w","w","w","w","w","w","m","m","m","w","w","
 
 # auch die Ergebnisse solcher Funktionen können wir einer Variabel zuweisen:
  tabelle <- xtabs(~more.data)
-# print(tabelle)
+ print(tabelle)
 
 # Wir können die Werte auch aus dieser Tabelle bearbeiten
  total <- sum(tabelle)
-# print(total)
+ print(total)
 
 # und damit relative Häufigkeiten ausdrucken:
  tabelle.rel <- tabelle / total
@@ -102,7 +102,7 @@ tabelle.prozent <- paste (100*tabelle.rel,"%")
 
 # Aber die Frage bleibt, wie berechnen wir den Modus? Durch sortieren!
  tabelle.sorted <- sort(tabelle,decreasing=TRUE)
-# print(tabelle.sorted)
+ print(tabelle.sorted)
 
 # Sie sehen hier, dass manche Funktionen weitere Optionen haben, die wir
 # bestimmen können. Hier wollten wir, dass die Liste mit dem größten Wert
@@ -110,20 +110,23 @@ tabelle.prozent <- paste (100*tabelle.rel,"%")
 
 # Nehmen Sie das erste Element aus dem obigen Ergebnis, um den Modalwert zu
 # bekommen:
-# modus <- code_hier
+ modus <- (tabelle.sorted[1])
+print (modus)
 
 # Verständisfrage: gibt es immer nur *einen* Modalwert? 
 # Wenn nicht, ist der Code oben korrekt? Warum?
 # Schreiben Sie Ihre Antwort als Comment hier.
 
-# antwort_hier
+# Nein, es kann auch bi-, sowie  multimodale Verteilungen geben. 
+# Der obige Code ist korrekt, da durch den decreasing-Befehl der häufigste Wert an
+# die erste Stelle gesetzt wurde.
 
 # Als Abscheid ein Beispiel mit der Darstellung Frequenzdaten mit Säulendiagramm
 # bzw. Histogramm
 
-# library(ggplot2)
-# my.histogram <- qplot(more.data,geom="histogram")
-# print(my.histogram)
+ library(ggplot2)
+ my.histogram <- qplot(more.data,geom="histogram")
+ print(my.histogram)
 
 # Sie sind jetzt fertig -- das waren ganz viele Kleinigkeiten, aber
 # Kleinigkeiten, die wir immer wieder nutzen werden. Machen Sie einen Commit und
