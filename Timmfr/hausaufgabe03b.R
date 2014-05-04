@@ -96,7 +96,7 @@ more.data <- c("m","m","w","w","m","w","w","w","w","w","w","m","m","m","w","w","
 print(tabelle.rel)
 
 # Vervollständigen Sie folgende Zeile, sodass Prozentwerte aus den relativen
-# Häufigkeiten entst ehen: 
+# Häufigkeiten entstehen: 
 tabelle.prozent <- paste (100*tabelle.rel,"%") 
  print(tabelle.prozent)
 
@@ -116,7 +116,7 @@ print (modus)
 
 # Verständisfrage: gibt es immer nur *einen* Modalwert? 
 # Wenn nicht, ist der Code oben korrekt? Warum?
-# Schreiben Sie Ihre Antwort als Comment hier.
+# Schreiben Sie Ihre Antwort als Comment hier..
 
 # Nein, es kann auch bi-, sowie  multimodale Verteilungen geben. 
 # Der obige Code ist korrekt, da durch den decreasing-Befehl der häufigste Wert an
