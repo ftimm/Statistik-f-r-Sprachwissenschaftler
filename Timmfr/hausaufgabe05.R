@@ -92,7 +92,11 @@ print(frauen.studiengang.bw)
 # Sehen die Studiengänge anders aus? Wir müssen hier noch relativ vorrsichtig
 # sein, weil die Gruppen *unbalanziert* sind, d.h. die Gruppen sind
 # unterschiedlich groß. Aber wie sieht der Vergleich auf den ersten Blick aus?
-# (Keine explizite Antwort nötig, nur eine Überlegung.)
+
+# Bei der Germanistischen Linguistik und bei other gibt es zu wenige Teilnehmerinnen in der Gruppe, 
+# sodass der Median bei other in der Mitte ist und es bei der Ger. Ling. nur eine Größe gibt. 
+# Die Klinische Linguistik hat eine größere Streuung und einen leicht nach oben versetzten Median,
+# während der Median bei der Linkk sehr mittig ist.
 
 # Wir können natürlich auch die Dichte anschauen:
 frauen.studiengang.dichte <- ggplot(data=frauen,aes(x=major)) + geom_density(aes(x=height,color=major))
@@ -100,10 +104,13 @@ print(frauen.studiengang.dichte)
 
 # Haben Sie den gleichen Eindruck wie bei Box-Whisker bekommen? Unterscheiden
 # sich die Gruppen?
-# (Keine explizite Antwort nötig, nur eine Überlegung.)
+
+# Germ. Ling. und other werden aufgrund der zu geringen Anzahl hierbei nicht angezeigt.
+# Aufgrund der geringen Teilnehmerzahl in Speech Science unterliegt diese Kurve stärkeren Schwankungen.
+# Auch Linkk ist relativ steil. Da Kling die meiste Teilnehmerzahl hat, ist die Kurve am "rundesten"/ausgegleichensten.
 
 # Welche Gruppe hat gefehlt? Wie viele Datenpunkte gab es für die Gruppe?
-# (Keine explizite Antwort nötig, nur eine Überlegung.)
+# s.o.
 
 # Wir können auch die verschiedenen Maße der Streuung berechnen.
 # In R gibt es oft verschiedene Möglichkeiten, etwas zu machen. Wir haben bisher
