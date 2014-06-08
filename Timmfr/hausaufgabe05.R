@@ -22,7 +22,7 @@ library(ggplot2)
 dat <- read.table("Data\\body_dim_long.tab",header=TRUE) 
 
 # Wir haben im Kurs die Verteilung der Variabel weight angeschaut. In Skripten
-# werden Ergebnisse nicht automatich dargestellt, sondern nur dann, wenn ein
+# werden Ergbnisse nicht automatich dargestellt, sondern nur dann, wenn ein
 # print Befehl genutzt wird. Dann müssten wir eigentlich den ganzen "ggplot() +
 # ..." Befehl in die Klammer von print() einpacken, was nicht besonders lesbar
 # ist. Wie bei anderen Berechnungen können wir den Output von ggplot einer
