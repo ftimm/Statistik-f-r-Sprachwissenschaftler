@@ -1,5 +1,5 @@
 % Hausaufgabe 16
-% Phillip Alday <phillip.alday@staff.uni-marburg.de>
+% Frederik Timm <timmfr@students.uni-marburg.de>
 % 2014-06-11
 
 Falls die Umlaute in dieser und anderen Dateien nicht korrekt dargestellt werden, sollten Sie File > Reopen with Encoding > UTF-8 sofort machen (und auf jeden Fall ohne davor zu speichern), damit die Enkodierung korrekt erkannt wird! 
@@ -60,6 +60,34 @@ ggplot(diamonds,aes(x=carat,y=price,color=color)) + geom_point() + facet_wrap(~c
 
 # Noch eine Überlegung
 Haben Sie dabei explorativ oder konfirmativ gearbeitet? Was hat das für eine Auswirkung auf die Interpretation der Ergebnisse?
+
+
+# Analyse
+
+Zusammenhang von Preis und Carat/Klarheit:
+
+```{r}
+ggplot(diamonds, aes(x=carat, y=price, color=clarity))+ geom_point(alpha=.5) 
+```
+Es ist zu sehen, dass die Beziehung zwischen Preis und Volumen der Steine fast exponential verläuft. Zudem sind unter den größten und teuersten Steinen meist Klarheitsgrade von I1, SI1/2 vorhanden.
+Um die Ergebnisse schriftlich darzustellen, wird lineare Regression genutzt:
+
+```{r}
+summary(lm(price~carat,data=diamonds))
+```
+Da der Wert von R^2 bei .85 liegt, scheint das Volumen einen großen Einfluss auf den Preis zu haben. 
+
+Die kategoriale Variable "Clarity" wird durch eine Funktion umgewandelt, damit sie analysierbar wird:
+```{r}
+diamonds$clarity.numeric <- as.numeric(diamonds$clarity)
+summary(lm(price~clarity.numeric,data=diamonds))
+```
+Der niedriege R^2 Wert weist darauf hin, dass die Klarheit der Diamenten wenig Einfluss auf den Preis hat.
+
+```{r}
+summary(lm(price~carat*clarity.numeric,data=diamonds))
+
+```
 
 # Lizenz
 Dieses Werk ist lizenziert unter einer CC-BY-NC-SA Lizenz.
